@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Untitled-1.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+<script>    
+// Câu hỏi 1
+    let a = prompt('Input number A: ');
+    let b = prompt('Input number B: ');
+
+    var listNumber = function (n) {
+        var checkList = true;
+        if (n < 2) {
+            checkList = false;
+        }
+        else {
+            for (var i = 2; i < n -1; i++) {
+                if (n % i == 0) {
+                    checkList = false;
+                    break;
+                }
+            }
+        }
+        if (checkList == true) {
+            document.write(n+" ");
+        }
+    }
+
+    for (let i = Number(a); i <= Number(b); i++) {
+        listNumber(i);
+    }
+// Câu hỏi 2
+    let number = prompt('Input number: ');
+
+    var  numberOneTriangle = function (n) {
+        if (n > 10) {
+            alert('Please press number 1 -> 10');
+        }
+        else {
+            for (var i = 1; i <= n; i++) {
+                let s = "";
+                for (var j = 1; j <= i; j++) {
+                    s += "*";
+                }
+                document.write(s + "</br>");
+            }
+        }
+    }
+     numberOneTriangle(number);
+
+</script>
+</body>
+
+</html>
